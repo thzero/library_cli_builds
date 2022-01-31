@@ -44,7 +44,7 @@ jobs:
         npm install --production
     - name: Build
       run: |
-        npm --experimental-specifier-resolution ./index.js --build "libraries" --label "update"
+        node --experimental-specifier-resolution=node --nolazy --trace-uncaught ./index.js --build "libraries" --label "update"
       env:
         LOG_LEVEL: debug
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
