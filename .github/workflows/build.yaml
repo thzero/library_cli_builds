@@ -31,14 +31,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: 'https://registry.npmjs.org'
-    - uses: actions/checkout@v2
-      with:
-        repository: 'thzero/library_cli_build'
-        ref: master
-    - name: curl
-      uses: wei/curl@master
-      with:
-        args: -o builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
+    # - uses: actions/checkout@v2
+    #   with:
+    #     repository: 'thzero/library_cli_build'
+    #     ref: master
+    # - name: curl
+    #   uses: wei/curl@master
+    #   with:
+    #     args: -o builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
     - name: Node Dependencies
       run: |
         npm install nodegit
