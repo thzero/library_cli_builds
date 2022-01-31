@@ -33,15 +33,21 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - uses: actions/checkout@v2
       with:
-        repository: 'thzero/library_cli_build'
         ref: master
     - name: Test1
+      run: |
+        ls -a
+    - uses: actions/checkout@v2
+      with:
+        repository: 'thzero/library_cli_build'
+        ref: master
+    - name: Test2
       run: |
         ls -a
     - name: curl
       uses: wei/curl@master
       with:
-        args: -o do-bots.txt  https://raw.githubusercontent.com/thzero/library_cli_builds/master/builds.json
+        args: -o TEST.TXT  https://raw.githubusercontent.com/thzero/library_cli_builds/master/builds.json
     - name: Test3
       run: |
         ls -a
