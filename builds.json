@@ -1,0 +1,148 @@
+[
+    {
+        "name": "libraries",
+        "buildType": "publishOnly",
+        "repos": [
+            {
+                "repo": "library_cli",
+                "scope": "@thzero",
+                "wait": true
+            },
+            {
+                "repo": "library_common",
+                "scope": "@thzero",
+                "wait": true
+            },
+            {
+                "repo": "library_common_service",
+                "scope": "@thzero",
+                "wait": true
+            },
+            {
+                "name": "library_client...",
+                "repos": [
+                    {
+                        "repo": "library_client",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "name": "library_client services...",
+                        "repos": [
+                            {
+                                "repo": "library_client_firebase",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_client_service_rest_axios",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_client_service_rest_fetch",
+                                "scope": "@thzero",
+                                "wait": false
+                            }
+                        ],
+                        "wait": false
+                    },
+                    {
+                        "repo": "library_client_vue",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "repo": "library_client_vue3",
+                        "scope": "@thzero",
+                        "wait": true
+                    }
+                ],
+                "wait": false
+            },
+            {
+                "name": "server...",
+                "repos": [
+                    {
+                        "repo": "library_server",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "name": "library_server repositories...",
+                        "repos": [
+                            {
+                                "repo": "library_server_repository_mongo",
+                                "scope": "@thzero",
+                                "wait": false
+                            }
+                        ],
+                        "wait": false
+                    },
+                    {
+                        "name": "library_server services...",
+                        "repos": [
+                            {
+                                "repo": "library_server_firebase",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_logger_pino",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_logger_winston",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_service_grpc",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_messaging_slack",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_service_rest_axios",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_validation_joi",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "name": "library_server_service_discovery services...",
+                                "repos": [
+                                    {
+                                        "repo": "library_server_service_discovery_resources_lightweight_proto",
+                                        "scope": "@thzero",
+                                        "wait": true
+                                    },
+                                    {
+                                        "repo": "library_server_service_discovery_resources_lightweight",
+                                        "scope": "@thzero",
+                                        "wait": false
+                                    },
+                                    {
+                                        "repo": "library_server_service_discovery_mdns",
+                                        "scope": "@thzero",
+                                        "wait": false
+                                    }
+                                ],
+                                "wait": false
+                            }
+                        ]
+                    }
+                ],
+                "wait": false
+            }
+        ]
+    }
+]
