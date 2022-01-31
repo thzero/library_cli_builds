@@ -47,4 +47,4 @@ jobs:
         cat builds.json
     - name: Node Dependencies
       run: |
-        npm install --production
+        npm install --no-package-lock
