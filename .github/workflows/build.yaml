@@ -35,13 +35,19 @@ jobs:
       with:
         repository: 'thzero/library_cli_build'
         ref: master
-    # - name: curl
-    #   uses: wei/curl@master
-    #   with:
-    #     args: -o builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
+    - name: Workspace
+      run: |
+        mkdir working
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: -o ./working/builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
     - name: Node Dependencies
       run: |
         npm install --production
+    - name: Listing
+      run: |
+      ls -a
     - name: Build
       run: |
         node --experimental-specifier-resolution=node --nolazy --trace-uncaught ./index.js --build "libraries" --label "update"
