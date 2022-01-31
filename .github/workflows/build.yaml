@@ -41,7 +41,7 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: -o ./working/builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/working/builds.json
+        args: -o ./working/builds.json https://raw.githubusercontent.com/${{ github.repository }}/master/working/builds.json
     - name: Node Dependencies
       run: |
         npm install --production
