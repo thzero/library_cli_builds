@@ -39,12 +39,6 @@ jobs:
       uses: wei/curl@master
       with:
         args: -o builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
-    - name: Test3
-      run: |
-        ls -a
-    - name: Cat
-      run: |
-        cat builds.json
     - name: Node Dependencies
       run: |
-        npm install --no-package-lock
+        npm install nodegit
