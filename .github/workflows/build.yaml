@@ -35,10 +35,10 @@ jobs:
       with:
         repository: 'thzero/library_cli_build'
         ref: master
-    - name: curl
-      uses: wei/curl@master
-      with:
-        args: -o builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
+    # - name: curl
+    #   uses: wei/curl@master
+    #   with:
+    #     args: -o builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
     - name: Node Dependencies
       run: |
         npm install --production
