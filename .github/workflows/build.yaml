@@ -33,7 +33,7 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - uses: actions/checkout@v2
       with:
-        repository: '@thzero/library_cli_build'
+        repository: 'thzero/library_cli_build'
         ref: master
     - name: Test1
       run: |
