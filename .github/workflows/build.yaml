@@ -1,0 +1,47 @@
+name: Build CI
+
+on:
+    workflow_dispatch:
+      inputs:
+        label:
+          description: 'Label'
+          default: 'Npm Version Update'
+        logLevel:
+          description: 'Log level'
+          required: true
+          default: 'warning'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    if: github.actor == github.event.repository.owner.login
+
+    strategy:
+      matrix:
+        #node-version: [8.x, 10.x, 12.x]
+        node-version: [16.x]
+
+    steps:
+    - name: Input
+      run: |
+        echo label: ${{ github.event.inputs.label }}
+    - name: Initialize Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: 'https://registry.npmjs.org'
+    - uses: actions/checkout@v2
+      with:
+        repository: @thzero/library_cli_build
+        ref: master
+    - name: Test1
+      run: |
+        ls -a
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: -o do-bots.txt  https://raw.githubusercontent.com/thzero/library_cli_builds/master/builds.json
+    - name: Test3
+      run: |
+        ls -a
