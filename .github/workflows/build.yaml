@@ -47,5 +47,5 @@ jobs:
         node --experimental-specifier-resolution=node --nolazy --trace-uncaught ./index.js --build "libraries" --label "update"
       env:
         LOG_LEVEL: debug
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
