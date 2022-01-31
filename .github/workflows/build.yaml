@@ -44,7 +44,10 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: -o TEST.TXT  https://raw.githubusercontent.com/thzero/library_cli_builds/master/builds.json
+        args: -o builds.json  https://raw.githubusercontent.com/${{ github.repository }}/master/builds.json
     - name: Test3
       run: |
         ls -a
+    - name: Cat
+      run: |
+        cat builds.json
