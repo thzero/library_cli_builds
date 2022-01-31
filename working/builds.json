@@ -5,16 +5,19 @@
         "repos": [
             {
                 "repo": "library_cli",
+                "repo_url": "https://github.com/thzero/library_cli.git",
                 "scope": "@thzero",
                 "wait": true
             },
             {
                 "repo": "library_common",
+                "repo_url": "https://github.com/thzero/library_common.git",
                 "scope": "@thzero",
                 "wait": true
             },
             {
                 "repo": "library_common_service",
+                "repo_url": "https://github.com/thzero/library_common_service.git",
                 "scope": "@thzero",
                 "wait": true
             }
