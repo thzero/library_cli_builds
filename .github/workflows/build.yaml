@@ -42,9 +42,9 @@ jobs:
     - name: Node Dependencies
       run: |
         npm install --production
-    - name: Node Dependencies
+    - name: Build
       run: |
-        npm --experimental-specifier-resolution index.js --build "libraries" --label "update"
+        npm --experimental-specifier-resolution ./index.js --build "libraries" --label "update"
       env:
         LOG_LEVEL: debug
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
