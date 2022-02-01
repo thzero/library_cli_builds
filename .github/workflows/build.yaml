@@ -45,12 +45,6 @@ jobs:
     - name: Node Dependencies
       run: |
         npm install --production
-    - name: Listing
-      run: |
-        ls -a
-    - name: Listing2
-      run: |
-        ls -a ./working
     - name: Build
       run: |
         node --experimental-specifier-resolution=node --nolazy --trace-uncaught ./index.js --build "libraries" --label "update"
@@ -58,6 +52,3 @@ jobs:
         LOG_LEVEL: debug
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    - name: Listing3
-      run: |
-        ls -a ./working/publish/library_cli
