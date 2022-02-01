@@ -60,4 +60,4 @@ jobs:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - name: Listing3
       run: |
-        ls -a ./working
+        ls -a ./working/publish/library_cli
