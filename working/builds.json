@@ -20,6 +20,48 @@
                 "repo_url": "https://github.com/thzero/library_common_service.git",
                 "scope": "@thzero",
                 "wait": true
+            },
+            {
+                "name": "library_client...",
+                "repos": [
+                    {
+                        "repo": "library_client",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "name": "library_client services...",
+                        "repos": [
+                            {
+                                "repo": "library_client_firebase",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_client_service_rest_axios",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_client_service_rest_fetch",
+                                "scope": "@thzero",
+                                "wait": false
+                            }
+                        ],
+                        "wait": false
+                    },
+                    {
+                        "repo": "library_client_vue",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "repo": "library_client_vue3",
+                        "scope": "@thzero",
+                        "wait": true
+                    }
+                ],
+                "wait": false
             }
         ]
     }
