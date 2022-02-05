@@ -1,7 +1,7 @@
 [
     {
         "name": "libraries",
-        "buildType": "publishOnly",
+        "buildType": "standard",
         "repos": [
             {
                 "repo": "library_cli",
