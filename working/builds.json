@@ -26,6 +26,7 @@
                 "repos": [
                     {
                         "repo": "library_client",
+                        "repo_url": "https://github.com/thzero/library_client.git",
                         "scope": "@thzero",
                         "wait": true
                     },
@@ -34,16 +35,19 @@
                         "repos": [
                             {
                                 "repo": "library_client_firebase",
+                                "repo_url": "https://github.com/thzero/library_client_firebase.git",
                                 "scope": "@thzero",
                                 "wait": false
                             },
                             {
                                 "repo": "library_client_service_rest_axios",
+                                "repo_url": "https://github.com/thzero/library_client_service_rest_axios.git",
                                 "scope": "@thzero",
                                 "wait": false
                             },
                             {
                                 "repo": "library_client_service_rest_fetch",
+                                "repo_url": "https://github.com/thzero/library_client_service_rest_fetch.git",
                                 "scope": "@thzero",
                                 "wait": false
                             }
@@ -52,11 +56,13 @@
                     },
                     {
                         "repo": "library_client_vue",
+                        "repo_url": "https://github.com/thzero/library_client_vue.git",
                         "scope": "@thzero",
                         "wait": true
                     },
                     {
                         "repo": "library_client_vue3",
+                        "repo_url": "https://github.com/thzero/library_client_vue3.git",
                         "scope": "@thzero",
                         "wait": true
                     }
