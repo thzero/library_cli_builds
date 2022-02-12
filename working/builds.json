@@ -1,6 +1,183 @@
 [
     {
-        "name": "libraries",
+        "name": "dependencyCheck",
+        "buildType": "dependencyCheck",
+        "repos": [
+            {
+                "repo": "library_cli",
+                "repo_url": "https://github.com/thzero/library_cli.git",
+                "scope": "@thzero",
+                "wait": true
+            },
+            {
+                "repo": "library_common",
+                "repo_url": "https://github.com/thzero/library_common.git",
+                "scope": "@thzero",
+                "wait": true
+            },
+            {
+                "repo": "library_common_service",
+                "repo_url": "https://github.com/thzero/library_common_service.git",
+                "scope": "@thzero",
+                "wait": true
+            },
+            {
+                "name": "library_client...",
+                "repos": [
+                    {
+                        "repo": "library_client",
+                        "repo_url": "https://github.com/thzero/library_client.git",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "name": "library_client services...",
+                        "repos": [
+                            {
+                                "repo": "library_client_firebase",
+                                "repo_url": "https://github.com/thzero/library_client_firebase.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_client_service_rest_axios",
+                                "repo_url": "https://github.com/thzero/library_client_service_rest_axios.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_client_service_rest_fetch",
+                                "repo_url": "https://github.com/thzero/library_client_service_rest_fetch.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            }
+                        ],
+                        "wait": false
+                    },
+                    {
+                        "repo": "library_client_vue",
+                        "repo_url": "https://github.com/thzero/library_client_vue.git",
+                        "scope": "@thzero",
+                        "dependencyReject": [
+                            "vue",
+                            "vue-*",
+                            "vee-validate"
+                        ],
+                        "wait": true
+                    },
+                    {
+                        "repo": "library_client_vue3",
+                        "repo_url": "https://github.com/thzero/library_client_vue3.git",
+                        "scope": "@thzero",
+                        "dependencyReject": [
+                            "vue",
+                            "vue-*",
+                            "vee-validate"
+                        ],
+                        "wait": true
+                    }
+                ],
+                "wait": false
+            },
+            {
+                "name": "server...",
+                "repos": [
+                    {
+                        "repo": "library_server",
+                        "repo_url": "https://github.com/thzero/library_server.git",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "name": "library_server repositories...",
+                        "repos": [
+                            {
+                                "repo": "library_server_repository_mongo",
+                                "repo_url": "https://github.com/thzero/library_server_repository_mongo.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            }
+                        ],
+                        "wait": false
+                    },
+                    {
+                        "name": "library_server services...",
+                        "repos": [
+                            {
+                                "repo": "library_server_firebase",
+                                "repo_url": "https://github.com/thzero/library_server_firebase.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_logger_pino",
+                                "repo_url": "https://github.com/thzero/library_server_logger_pino.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_logger_winston",
+                                "repo_url": "https://github.com/thzero/library_server_logger_winston.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_service_grpc",
+                                "repo_url": "https://github.com/thzero/library_server_service_grpc.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_messaging_slack",
+                                "repo_url": "https://github.com/thzero/library_server_messaging_slack.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_service_rest_axios",
+                                "repo_url": "https://github.com/thzero/library_server_service_rest_axios.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_server_validation_joi",
+                                "repo_url": "https://github.com/thzero/library_server_validation_joi.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "name": "library_server_service_discovery services...",
+                                "repos": [
+                                    {
+                                        "repo": "library_server_service_discovery_resources_lightweight_proto",
+                                        "repo_url": "https://github.com/thzero/library_server_service_discovery_resources_lightweight_proto.git",
+                                        "scope": "@thzero",
+                                        "wait": true
+                                    },
+                                    {
+                                        "repo": "library_server_service_discovery_resources_lightweight",
+                                        "repo_url": "https://github.com/thzero/library_server_service_discovery_resources_lightweight.git",
+                                        "scope": "@thzero",
+                                        "wait": false
+                                    },
+                                    {
+                                        "repo": "library_server_service_discovery_mdns",
+                                        "repo_url": "https://github.com/thzero/library_server_service_discovery_mdns.git",
+                                        "scope": "@thzero",
+                                        "wait": false
+                                    }
+                                ],
+                                "wait": false
+                            }
+                        ]
+                    }
+                ],
+                "wait": false
+            }
+        ]
+    },
+    {
+        "name": "standard",
         "buildType": "standard",
         "repos": [
             {
@@ -58,12 +235,22 @@
                         "repo": "library_client_vue",
                         "repo_url": "https://github.com/thzero/library_client_vue.git",
                         "scope": "@thzero",
+                        "dependencyReject": [
+                            "vue",
+                            "vue-*",
+                            "vee-validate"
+                        ],
                         "wait": true
                     },
                     {
                         "repo": "library_client_vue3",
                         "repo_url": "https://github.com/thzero/library_client_vue3.git",
                         "scope": "@thzero",
+                        "dependencyReject": [
+                            "vue",
+                            "vue-*",
+                            "vee-validate"
+                        ],
                         "wait": true
                     }
                 ],
