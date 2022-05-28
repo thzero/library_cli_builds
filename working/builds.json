@@ -94,6 +94,18 @@
                         "wait": true
                     },
                     {
+                        "repo": "library_server_fastify",
+                        "repo_url": "https://github.com/thzero/library_server_fastify.git",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
+                        "repo": "library_server_koa",
+                        "repo_url": "https://github.com/thzero/library_server_koa.git",
+                        "scope": "@thzero",
+                        "wait": true
+                    },
+                    {
                         "name": "library_server repositories...",
                         "repos": [
                             {
