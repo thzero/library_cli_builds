@@ -234,6 +234,18 @@
                                 "wait": false
                             },
                             {
+                                "repo": "library_client_firebase_svelte",
+                                "repo_url": "https://github.com/thzero/library_client_firebase_svelte.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
+                                "repo": "library_client_firebase_vue",
+                                "repo_url": "https://github.com/thzero/library_client_firebase_vue.git",
+                                "scope": "@thzero",
+                                "wait": false
+                            },
+                            {
                                 "repo": "library_client_service_rest_axios",
                                 "repo_url": "https://github.com/thzero/library_client_service_rest_axios.git",
                                 "scope": "@thzero",
@@ -247,6 +259,12 @@
                             }
                         ],
                         "wait": false
+                    },
+                    {
+                        "repo": "library_client_svelte",
+                        "repo_url": "https://github.com/thzero/library_client_svelte.git",
+                        "scope": "@thzero",
+                        "wait": true
                     },
                     {
                         "repo": "library_client_vue",
